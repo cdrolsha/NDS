@@ -14,11 +14,15 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
@@ -58,7 +62,7 @@ public class NewsstandActivity extends ListActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_list);
-
+		
 		cd = new ConnectionDetector(getApplicationContext());
 		
 		// Check for internet connection
@@ -95,6 +99,58 @@ public class NewsstandActivity extends ListActivity {
 				startActivity(i);
 			}
 		});
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.nav_menu, menu);
+		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		super.onOptionsItemSelected(item);
+		switch(item.getItemId()){
+			case R.id.newsstand:
+				newsstandMenuItem();
+				break;
+			case R.id.settings:
+				settingsMenuItem();
+				break;
+			case R.id.about:
+				aboutMenuItem();
+				break;				
+		}
+		
+		return true;
+		
+	}
+	
+	private void newsstandMenuItem() {
+		Intent i = new Intent(getApplicationContext(), NewsstandActivity.class);
+		
+		startActivity(i);
+	}
+	
+	private void settingsMenuItem() {
+		Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
+		
+		startActivity(i);
+	}
+	
+	private void aboutMenuItem() {
+		new AlertDialog.Builder(this)
+		.setTitle("About")
+		.setMessage("This is an About AlertDialog")
+		.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO Auto-generated method stub
+				
+			}
+		}).show();
+		
 	}
 	
 	/**
@@ -181,6 +237,8 @@ public class NewsstandActivity extends ListActivity {
 					
 					// update listview
 					setListAdapter(adapter);
+					
+					setTitle("Newsstand");
 				}
 			});
 		}

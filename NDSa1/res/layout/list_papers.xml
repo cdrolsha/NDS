@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+    
+    <!-- newsrack ID / hidden by default -->
+    <TextView
+        android:id="@id/newsrack_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+    
+    <!-- paper ID / hidden by default -->
+    <TextView
+        android:id="@+id/paper_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+    
+    <!-- paper Title -->
+    <TextView
+        android:id="@+id/paper_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dip"
+        android:paddingLeft="5dip"
+        android:paddingTop="15dip"
+        android:textColor="#890500"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    
+    <!-- paper Description -->
+    <TextView
+        android:id="@+id/paper_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/paper_title"
+        android:paddingLeft="10dip"
+        android:paddingBottom="15dip"
+        android:paddingTop="15dip"
+        android:textColor="#120a23"
+        android:textStyle="italic" />
+    
+
+</RelativeLayout>

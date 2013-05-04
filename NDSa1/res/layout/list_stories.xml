@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+    
+    <!-- newsrack ID / hidden by default -->
+    <TextView
+        android:id="@id/newsrack_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+    
+    <!-- paper ID / hidden by default -->
+    <TextView
+        android:id="@+id/paper_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+    
+    <!-- story ID / hidden by default -->
+    <TextView
+        android:id="@+id/story_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!-- story link / hidden by default -->
+    <TextView
+        android:id="@+id/story_link"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!-- Story Title -->
+    <TextView
+        android:id="@+id/story_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="15dip"
+        android:paddingBottom="5dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:textColor="#890500"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    
+    <!-- Story summary -->
+    <TextView
+        android:id="@+id/story_summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/story_title"
+        android:paddingTop="40dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="5dip"
+        android:textSize="14sp"
+        android:textColor="#120a23" />
+    
+    <!-- Story date -->
+    <TextView
+        android:id="@+id/story_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/story_title"
+		android:paddingTop="10dip"
+		android:paddingLeft="10dip"
+		android:paddingRight="5dip"
+        android:textColor="#120a23"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+    
+</RelativeLayout>

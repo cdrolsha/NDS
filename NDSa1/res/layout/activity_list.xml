@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:divider="#b5b5b5"
         android:dividerHeight="1dp"
-        android:cacheColorHint="#aa3f3846" />
+        android:cacheColorHint="#ee3f3846" />
 
    <!--  
          This FrameLayout insets its children based on system windows using

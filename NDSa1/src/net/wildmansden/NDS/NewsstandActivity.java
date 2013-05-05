@@ -111,6 +111,10 @@ public class NewsstandActivity extends ListActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		super.onOptionsItemSelected(item);
 		switch(item.getItemId()){
+			case R.id.add:
+				Intent i = new Intent(getApplicationContext(), AddNewsrackActivity.class);
+				startActivity(i);
+				return true;
 			case R.id.newsstand:
 				newsstandMenuItem();
 				break;

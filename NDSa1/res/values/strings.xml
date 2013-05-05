@@ -3,5 +3,6 @@
 
     <string name="app_name">NDS</string>
     <string name="settings">This is the Settings Activity</string>
+    <string name="addNewsrack">This is the Add Newsrack Activity</string>
 
 </resources>
